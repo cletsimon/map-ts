@@ -17,6 +17,10 @@ npm install @types/faker
 3. Generate an API key
 4. Add the google maps script tag to our HTML file
 
+```
+npm install @types/googlemaps
+```
+
 ## running parcel
 
 ```
