@@ -14,23 +14,25 @@ export class CustomMap {
     });
   }
 
-  addUserMarker(user: User): void {
+  // not a good approach
+  // if we keep adding different classes that are mappable
+  addMarker(mappable: User | Company): void {
     new google.maps.Marker({
       map: this.googleMap,
       position: {
-        lat: user.location.lat,
-        lng: user.location.lng
+        lat: mappable.location.lat,
+        lng: mappable.location.lng
       }
     });
   }
 
-  addCompanyMarker(company: Company): void {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: {
-        lat: company.location.lat,
-        lng: company.location.lng
-      }
-    });
-  }
+  // addCompanyMarker(company: Company): void {
+  //   new google.maps.Marker({
+  //     map: this.googleMap,
+  //     position: {
+  //       lat: company.location.lat,
+  //       lng: company.location.lng
+  //     }
+  //   });
+  // }
 }
